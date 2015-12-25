@@ -1,0 +1,108 @@
+Linux scripts for Rust
+
+Rust homepage: http://playrust.com
+               http://playrust.com/dedicated-server/
+
+By the date 2015-12-25 there is no native Linux dedicated server for Rust.
+It is possible to install the dedicated with some effort, but one of the 
+libraries as unsolvable dependencies to GLX-functions. It seems this is
+a packaging/build problem of the Rust developers.
+The most (community) recommended way for a Linux dedicated Server is running
+wine as emulation. At least wine 1.7 is required.
+
+I'm using Archlinux, because it uses the latest possible wine version.
+The following scripts should help you to create a linux dedicated server 
+including systemd start/stop stuff.
+I also included inside the startscript a few comments about command line
+parameters.
+
+To Install wine, you need to enable the "multilib" repository for pacman, 
+see:
+
+  https://wiki.archlinux.org/index.php/Multilib
+
+Some informations about wine: 
+  https://wiki.archlinux.org/index.php/Wine
+
+I installed the following packages for wine:
+
+	wine wine-mono wine_gecko winetricks 
+
+The wine application will run inside a x11 framebuffer version, which 
+we won't directly access using "xvfb-run", this needs the package:
+
+  	 extra/xorg-server-xvfb 
+
+A complete list of the installed packages can be found in installed_packages.txt
+
+I'm running the server under an extra user called "rust", which you need to 
+create as root user and set a password:
+
+  useradd -m rust
+  passwd rust
+
+Login via SSH to your new rust account rust@servername and do the following 
+steps:
+
+  # git clone https://github.com/MaStr/rust_dedicated_linux.git
+
+Get the Rust server, this URL may change, check rust homepage link above:
+
+  # wget http://playrust.com/wp-content/uploads/2015/04/Rust_Server.zip
+  # unzip Rust_Server.zip 
+
+Now prepare the server
+
+  # ~/rust_dedicated_linux/wine_update_rust.sh 
+
+The next step is to create a copy of the instance script with your details
+
+  # cd ~/rust_dedicated_linux/
+  # cp wine_rust_instance.sh wine_rust_myserver.sh
+
+Edit and adjust your server settings:
+
+  # nano wine_rust_myserver.sh
+
+Test the server instance, the startup may take a while:
+
+  # ./wine_rust_myserver.sh
+
+To check what is going on, open a second session, change the folder, you 
+will find a logfile named by your server instace file:
+
+  # cd  ~/Server/rustds/
+  # tail myserver_output.txt
+
+Maybe you can't find the server in your client's server list (community servers),
+so to connect to your server by hand, open up the console with the "F1" key.
+Enter the following line to manually connect to your server:
+
+  client.connect  <ip>:<port>
+
+
+---- Prepare for automatic startup
+Create a copy of the service file and adjust it with your script name
+
+  # cp rust.service rustmyserver.service 
+  # nano rustmyserver.service
+
+Switch to user root (su) and that place the file to your service folders:
+
+  # cp rustmyserver.service /etc/systemd/system/
+  # systemct daemon-reload
+
+To start the server run
+
+  # systemctl start rustmyserver.service
+
+To enable autostart
+
+  # systemctl enable rustmyserver.service
+
+The service-file will restart the dedicated server if it fails unexpectetly.
+
+---- RCON tools
+I wasn't able to find a command line tool for connecting to the server, so you 
+need at least a windows tool like "Rusty" for remote administration:
+   http://oxidemod.org/threads/rusty-server-rcon-administration-tool.543/page-30

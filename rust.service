@@ -1,0 +1,15 @@
+[Unit]
+Description=Rust-Server
+After=syslog.target network.target
+
+[Service]
+ExecStart=/home/rust/rust_dedicated_linux/wine_rust_myserver.sh 
+User=rust
+Group=rust
+Type=simple
+Restart=on-failure
+RestartSec=42s
+
+
+[Install]
+WantedBy=multi-user.target

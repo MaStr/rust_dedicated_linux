@@ -1,0 +1,272 @@
+You can get this list via RCON tool using the command "help" or "find ." .
+
+The following list is by date 2015-12-25:
+
+
+====> EACH Variable can be used/added as a + option in wine_rust_instance.sh
+
+
+Variables:
+aianimation.groundorient no description (True)
+aianimation.speedscale no description (True)
+aianimation.qualitydistance no description (100)
+lerp.enabled Enables interpolation on network positions (True)
+lerp.smoothing The higher this value the more post process smoothing applied. 0 = accurate, 1 = smooth (0.5)
+lerp.time How many seconds behind to lerp. 0 is the most accurate but can be the most jittery (0.1)
+ai.think no description (True)
+ai.move no description (True)
+ai.sensetime no description (1)
+ai.frametime no description (5)
+ai.tickrate no description (5)
+antihack.enabled is antihack enabled at all (True)
+antihack.admincheat are admins allowed to use their admin cheat (True)
+antihack.objectplacement use antihack to verify object placement by players (True)
+antihack.playerdamage use antihack to verify damage caused by players (True)
+antihack.userlevel 0 == users, 1 == admins, 2 == developers (2)
+antihack.enforcementlevel 0 == no enforcement, 1 == kick, 2 == ban (DISABLED) (0)
+antihack.relaxationrate the rate at which violation values go back down (0.1)
+antihack.relaxationpause the time before violation values go back down (5)
+antihack.maxviolation violation value above this results in enforcement (5)
+antihack.noclip_protection 0 == disabled, 1 == raycast, 2 == spherecast (2)
+antihack.noclip_reject whether or not to reject movement when noclip is detected (True)
+antihack.noclip_penalty violation penalty to hand out when noclip is detected (4)
+antihack.speedhack_protection 0 == disabled, 1 == enabled (1)
+antihack.speedhack_reject whether or not to reject movement when speedhack is detected (False)
+antihack.speedhack_penalty violation penalty to hand out when speedhack is detected (4)
+antihack.speedhack_forgiveness speed threshold to assume speedhacking, lower value = more false positives (2)
+antihack.speedhack_deltatime time interval to calculate speed in, lower value = more false positives (0.2)
+antihack.speedhack_tickets required number of speeding tickets to trigger a violation (15)
+antihack.speedhack_history speeding ticket history length (20)
+antihack.flyhack_protection 0 == disabled, 1 == simple, 2 == advanced (DISABLED) (1)
+antihack.flyhack_reject whether or not to reject movement when flyhack is detected (False)
+antihack.flyhack_penalty violation penalty to hand out when flyhack is detected (4)
+antihack.flyhack_forgiveness distance threshold to assume flyhacking, lower value = more false positives (2)
+antihack.debuglevel 0 == silent, 1 == print max violation, 2 == print every violation (1)
+audio.master Volume (1)
+audio.music Volume (1)
+audio.game Volume (1)
+audio.voices Volume (1)
+audio.ambience Ambience System (True)
+audio.speakers Volume (2)
+batching.colliders no description (True)
+batching.verbose no description (0)
+chat.enabled Enable or disable chat displaying (True)
+chat.serverlog no description (True)
+construct.frameminutes How many minutes before a placed frame gets destroyed (30)
+craft.instant no description (False)
+decay.scale no description (1)
+decay.debug no description (False)
+env.time no description (12.0159)
+env.day no description (25)
+env.month no description (5)
+env.year no description (2024)
+file.time no description (False)
+fps.limit The maximum number of frames to render per second (256)
+fps.graph no description (0)
+gc.interval no description (-1)
+global.gamepool no description (False)
+global.safemode no description (False)
+global.debugmode no description (False)
+global.shaderwarmup no description (1)
+global.assetwarmup no description (1)
+global.prefabwarmup no description (1)
+global.maxthreads no description (8)
+global.censornudity no description (True)
+global.perf no description (0)
+global.god If you're an admin this will enable god mode (False)
+global.skincol If you're an admin you can change your skin colour using this variable (0-1) (-1)
+global.skintex If you're an admin you can change your skin texture using this variable (0-1) (-1)
+global.skinmesh If you're an admin you can change your head mesh using this variable (0-1) (-1)
+global.timewarning no description (False)
+global.developer no description (0)
+graphics.shadowlights no description (1)
+graphics.drawdistance no description (2500)
+graphics.hud no description (True)
+graphics.chat no description (True)
+graphics.branding no description (True)
+graphics.dof no description (False)
+graphics.dof_aper no description (12)
+graphics.dof_blur no description (1)
+graphics.quality The currently selected quality level (0)
+graphics.shadowdistance no description (100)
+graphics.shadowcascades no description (1)
+graphics.fov no description (75)
+graphics.lodbias no description (0.5)
+graphics.shaderlod no description (2147483647)
+graphics.uiscale no description (1)
+graphics.af no description (1)
+graphics.parallax no description (0)
+heli.lifetimeminutes no description (15)
+heli.guns no description (1)
+heli.bulletdamagescale no description (1)
+heli.bulletaccuracy no description (2)
+net.visdebug Turns on debug display of network visibility (False)
+net.debug no description (False)
+net.log no description (False) 
+physics.droppedmode The physics mode that dropped items and corpses should use. good, tempgood or fast. fast + tempgood might cause objects to fall through other objects. (good)
+physics.bouncethreshold no description (2)
+physics.sleepthreshold no description (0.005)
+physics.solveriterationcount The default solver iteration count permitted for any rigid bodies (default 7). Must be positive (3)
+physics.steps The amount of physics steps per second (10)
+sentry.targetall target everyone regardless of authorization (False)
+server.ip no description ()
+server.port no description (28015)
+server.maxplayers no description (10)
+server.hostname no description (AoD)
+server.identity no description (AoD1)
+server.level no description (Procedural Map)
+server.seed no description (innnnnn)
+server.salt no description (0)
+server.worldsize no description (0)
+server.saveinterval no description (600)
+server.secure no description (True)
+server.tickrate no description (10)
+server.entityrate no description (16)
+server.official no description (False)
+server.globalchat no description (True)
+server.stability no description (True)
+server.radiation no description (False)
+server.itemdespawn no description (180)
+server.pve no description (False)
+server.description no description ()
+server.headerimage no description ()
+server.url no description ()
+server.eac no description (1)
+server.updatebatch How many entity updates should we send per loop. Setting this > 1000 might cause lag when a player first joins your server. (128)
+server.planttick Plants tick every x seconds. This is how many seconds between ticks. (60)
+server.planttickscale Setting this to 2 will make plants grow, fruit and die two times faster than normal. (1)
+server.respawnresetrange Distance from sleeping bag to reset other sleeping bags/beds. (50)
+server.maxunack Max amount of unacknowledged messages before we assume we're congested (4)
+server.rootfolder no description (server/AoD1)
+server.backupfolder no description (backup/0/AoD1)
+server.backupfolder1 no description (backup/1/AoD1)
+server.backupfolder2 no description (backup/2/AoD1)
+server.backupfolder3 no description (backup/3/AoD1)
+server.compression no description (False)
+server.netlog no description (False)
+spawn.min_rate no description (0.1)
+spawn.max_rate no description (1)
+spawn.min_density no description (0.1)
+spawn.max_density no description (1)
+stability.verbose no description (0)
+stability.queuewarmup no description (True)
+stability.passes no description (10)
+terrain.quality no description (100)
+terrain.pvt no description (False)
+time.fixeddelta Fixed delta time in seconds (0.1)
+time.maxdelta The minimum amount of times to tick per frame (0.33)
+vis.damage Turns on debug display of damages (False)
+vis.attack Turns on debug display of attacks (False)
+vis.triggers Show trigger entries (False)
+voice.loopback no description (False)
+water.quality no description (0)
+xmas.enabled no description (True)
+xmas.spawnrange no description (50)
+xmas.giftsperplayer no description (2)
+rcon.password no description (xxxx)
+rcon.port no description (28016)
+rcon.ip no description (0.0.0.0)
+nametags.enabled no description (True) 
+
+
+
+
+Commands:
+global.status( ) Print out currently connected clients etc
+global.kick( void ) no description
+global.kickall( void ) no description
+global.ban( void ) no description
+global.moderatorid( void ) no description
+global.ownerid( void ) no description
+global.removemoderator( void ) no description
+global.removeowner( void ) no description
+global.banid( void ) no description
+global.unban( void ) no description
+global.players( ) Print out currently connected clients etc
+global.say( ) Sends a message in chat
+global.users( ) Show user info for players on server.
+global.banlist( ) List of banned users (sourceds compat)
+global.banlistex( ) List of banned users - shows reasons and usernames
+global.listid( ) List of banned users, by ID (sourceds compat)
+global.mutevoice( void ) no description
+global.unmutevoice( void ) no description
+global.mutechat( void ) no description
+global.unmutechat( void ) no description
+global.clientperf( void ) no description
+batching.status( void ) no description
+chat.say( void ) no description
+craft.add( void ) no description
+craft.canceltask( void ) no description
+craft.cancel( void ) no description
+data.export( void ) no description
+debug.flushgroup( ) Takes you in and out of your current network group, causing you to delete and then download all entities in your PVS again
+debug.breakheld( ) Break the current held object
+debug.breakitem( ) Break all the items in your inventory whose name match the passed string
+entity.debug_toggle( void ) no description
+entity.nudge( void ) no description
+env.addtime( void ) no description
+gc.collect( void ) no description
+gc.unload( void ) no description
+global.warmup( void ) no description
+global.restart( ) Restart the server - with 60 seconds warning
+global.quit( ) Leave the game
+global.report( void ) no description
+global.objects( void ) no description
+global.textures( void ) no description
+global.colliders( void ) no description
+global.error( void ) no description
+global.queue( void ) no description
+global.setinfo( void ) no description
+global.sleep( void ) no description
+global.kill( void ) no description
+global.respawn( void ) no description
+global.injure( void ) no description
+global.spectate( void ) no description
+global.respawn_sleepingbag( void ) no description
+global.respawn_sleepingbag_remove( void ) no description
+global.status_sv( void ) no description
+global.status_cl( void ) no description
+global.teleport( void ) no description
+global.teleport2me( void ) no description
+global.teleportany( void ) no description
+global.cleanup( void ) no description
+global.version( void ) no description
+global.sysinfo( void ) no description 
+heli.drop( void ) no description
+heli.calltome( void ) no description
+heli.call( void ) no description
+heli.strafe( void ) no description
+hierarchy.ls( void ) no description
+hierarchy.cd( void ) no description
+hierarchy.del( void ) no description
+inventory.endloot( void ) no description
+inventory.give( void ) no description
+inventory.giveall( void ) no description
+inventory.givebpall( void ) no description
+inventory.giveto( void ) no description
+inventory.giveid( void ) no description
+inventory.givearm( void ) no description
+inventory.givebp( void ) no description
+pool.stats( void ) no description
+pool.prefabs( void ) no description
+pool.assets( void ) no description
+pool.clear( void ) no description
+server.start( ) Starts a server
+server.stop( string DisconnectMessage ) Stops a server
+server.backup( ) Backup server folder
+server.writecfg( ) Writes config files
+server.fps( void ) no description
+server.save( ) Force save the current game
+server.readcfg( void ) no description
+spawn.fill_populations( void ) no description
+spawn.fill_groups( void ) no description
+weather.clouds( void ) no description
+weather.fog( void ) no description
+weather.wind( void ) no description
+weather.rain( void ) no description
+world.monuments( void ) no description
+xmas.refill( void ) no description
+global.dump( void ) no description
+global.find( string Name ) Search for a command
+global.echo( string output ) Prints something to the debug output
+cui.test( void ) no description 
