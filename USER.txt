@@ -1,0 +1,33 @@
+You can also run the rust daemon as a user own process.
+This means, that the user itself is able to start/stop the instance without sudo rights.
+
+Usually user services are started during the first login and stopped when
+then last session closes. To prevent this, make the user session available during bootup
+
+
+  # su 
+  # loginctl enable-linger rust
+  # exit
+
+Create a copy of the service file and adjust it with your script name,
+also remove the user & group parameter and change the Wanted By Target:
+
+  # cp rust.service rustmyserver.service
+  # sed -i -e 's|User=rust||' -e 's|Group=rust||'   rustmyserver.service 
+  # sed -i -e 's|multi-user.target|default.target|' rustmyserver.service
+  # nano rustmyserver.service
+
+Copy the service file to the systemd user folder:
+
+  # mkdir -p ~/.config/systemd/user/ 
+  # cp rustmyserver.service ~/.config/systemd/user/
+
+To enable the Userservice rustmyserver.service for startup run:
+
+  # systemctl --user enable rustmyserver.service
+
+To start/stop it use:
+
+  # systemctl --user start rustmyserver.service
+
+

@@ -81,7 +81,9 @@ Enter the following line to manually connect to your server:
   client.connect  <ip>:<port>
 
 
----- Prepare for automatic startup
+---- Prepare for automatic startup as a system service:
+(alternatively, see USER.txt)
+
 Create a copy of the service file and adjust it with your script name
 
   # cp rust.service rustmyserver.service 
